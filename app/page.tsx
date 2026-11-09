@@ -74,6 +74,82 @@ export default function Home() {
         </section>
 
         <section
+          className="content-section production-section"
+          aria-labelledby="production-title"
+        >
+          <div className="section-heading">
+            <div>
+              <p className="section-eyebrow">{siteContent.production.eyebrow}</p>
+              <h2 className="section-title" id="production-title">
+                {siteContent.production.title}
+              </h2>
+            </div>
+            <p className="section-introduction">
+              {siteContent.production.introduction}
+            </p>
+          </div>
+
+          <div className="production-grid">
+            {siteContent.production.comparisons.map((comparison) => (
+              <article className="production-card" key={comparison.title}>
+                <h3 className="production-card-title">{comparison.title}</h3>
+                <div className="production-pair">
+                  {[
+                    {
+                      stage: siteContent.production.comparisonLabels.before,
+                      image: comparison.before,
+                    },
+                    {
+                      stage: siteContent.production.comparisonLabels.after,
+                      image: comparison.after,
+                    },
+                  ].map(({ stage, image }) => (
+                    <figure className="production-figure" key={stage}>
+                      <div className="production-image-wrap">
+                        <Image
+                          className="production-image"
+                          src={image.image}
+                          alt={image.alt}
+                          width={image.width}
+                          height={image.height}
+                          sizes="(max-width: 760px) 42vw, (max-width: 1100px) 40vw, 22vw"
+                        />
+                      </div>
+                      <figcaption className="production-stage">
+                        {stage}
+                      </figcaption>
+                    </figure>
+                  ))}
+                </div>
+              </article>
+            ))}
+
+            <figure className="production-video-card">
+              <figcaption className="production-video-copy">
+                <p className="section-eyebrow">
+                  {siteContent.production.printing.label}
+                </p>
+                <p className="production-video-description">
+                  {siteContent.production.printing.description}
+                </p>
+              </figcaption>
+              <video
+                className="production-video"
+                controls
+                playsInline
+                preload="metadata"
+                aria-label={siteContent.production.printing.description}
+              >
+                <source
+                  src={siteContent.production.printing.source}
+                  type="video/mp4"
+                />
+              </video>
+            </figure>
+          </div>
+        </section>
+
+        <section
           className="content-section collection-section"
           id="collections"
           aria-labelledby="collection-title"

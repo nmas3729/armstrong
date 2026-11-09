@@ -2,6 +2,53 @@ export const siteContent = {
   brandName: "ARM.SVT",
   tagline: "Successful · Victorious · Thinkers",
   facebookUrl: "https://www.facebook.com/ARM.SVT",
+  production: {
+    eyebrow: "Manufacturing at ARM.SVT",
+    title: "From start to finish",
+    introduction: "Selected images and a printing clip.",
+    comparisonLabels: {
+      before: "Before",
+      after: "After",
+    },
+    comparisons: [
+      {
+        title: "Bags",
+        before: {
+          image: "/images/bags-before/before1.jpeg",
+          alt: "Black, red and yellow bag panels and partly assembled pieces.",
+          width: 963,
+          height: 1280,
+        },
+        after: {
+          image: "/images/bags-after/WhatsApp Image 2026-11-09 at 13.28.07 (1).jpeg",
+          alt: "Two black, red and yellow bags laid out for display.",
+          width: 1600,
+          height: 1204,
+        },
+      },
+      {
+        title: "Shoes",
+        before: {
+          image: "/images/shoe-before/before2.jpeg",
+          alt: "A person holding a shoe against a rotating machine wheel.",
+          width: 963,
+          height: 1280,
+        },
+        after: {
+          image: "/images/shoes-after/after1.jpeg",
+          alt: "Four dark shoes with red and yellow details arranged on shoe forms.",
+          width: 1280,
+          height: 963,
+        },
+      },
+    ],
+    printing: {
+      label: "Printing in progress",
+      description:
+        "A person operates a printer as a large printed design passes through.",
+      source: "/videos/blanket-before/blanket1.mp4",
+    },
+  },
   whatsapp: {
     phoneNumber: "27813441043",
     isVerified: false,
