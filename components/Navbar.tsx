@@ -76,7 +76,7 @@ export default function Navbar() {
             {siteContent.navigation.story}
           </a>
           <a className="nav-link" href="#showcase" onClick={closeMenu}>
-            {siteContent.navigation.gallery}
+            {siteContent.navigation.showcase}
           </a>
           <a className="nav-link" href="#contact" onClick={closeMenu}>
             {siteContent.navigation.contact}

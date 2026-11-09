@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
+import ProductionPhotos from "@/components/ProductionPhotos";
 import { siteContent } from "@/content/site";
 
 export default function Home() {
@@ -90,39 +91,7 @@ export default function Home() {
           </div>
 
           <div className="production-grid">
-            {siteContent.production.comparisons.map((comparison) => (
-              <article className="production-card" key={comparison.title}>
-                <h3 className="production-card-title">{comparison.title}</h3>
-                <div className="production-pair">
-                  {[
-                    {
-                      stage: siteContent.production.comparisonLabels.before,
-                      image: comparison.before,
-                    },
-                    {
-                      stage: siteContent.production.comparisonLabels.after,
-                      image: comparison.after,
-                    },
-                  ].map(({ stage, image }) => (
-                    <figure className="production-figure" key={stage}>
-                      <div className="production-image-wrap">
-                        <Image
-                          className="production-image"
-                          src={image.image}
-                          alt={image.alt}
-                          width={image.width}
-                          height={image.height}
-                          sizes="(max-width: 760px) 42vw, (max-width: 1100px) 40vw, 22vw"
-                        />
-                      </div>
-                      <figcaption className="production-stage">
-                        {stage}
-                      </figcaption>
-                    </figure>
-                  ))}
-                </div>
-              </article>
-            ))}
+            <ProductionPhotos groups={siteContent.production.photoGroups} />
 
             <figure className="production-video-card">
               <figcaption className="production-video-copy">
