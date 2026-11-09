@@ -1,0 +1,152 @@
+export const siteContent = {
+  brandName: "ARM.SVT",
+  tagline: "Successful · Victorious · Thinkers",
+  facebookUrl: "https://www.facebook.com/ARM.SVT",
+  whatsapp: {
+    phoneNumber: "27813441043",
+    isVerified: false,
+    message: "Hello ARM.SVT, I would like to make an enquiry. Thank you.",
+    label: "WhatsApp",
+    accessibleName: "Contact ARM.SVT on WhatsApp",
+  },
+  preLaunchReview: {
+    mediaPermissions:
+      "Before launch, confirm permission to use every third-party logo or mark visible in the photos and videos.",
+    identifiablePeople:
+      "Before launch, confirm consent from identifiable people shown in the photos and videos.",
+    whatsapp:
+      "The number 081 344 1043 is not confirmed as WhatsApp-enabled. Confirm it before setting whatsapp.isVerified to true.",
+  },
+  navigation: {
+    home: "Home",
+    collection: "The collection",
+    story: "Our story",
+    gallery: "Photo stories",
+    contact: "Contact",
+    facebook: "Facebook",
+    openMenu: "Open navigation menu",
+    closeMenu: "Close navigation menu",
+  },
+  hero: {
+    eyebrow: "Successful · Victorious · Thinkers",
+    title: "ARM.SVT",
+    introduction: "Successful · Victorious · Thinkers",
+    collectionLink: "Explore the collection",
+    storyLink: "A note from ARM.SVT",
+    monogram: "SVT",
+    edition: "ARM.SVT · 01",
+  },
+  collection: {
+    eyebrow: "A considered selection",
+    title: "The collection",
+    introduction: "Footwear, bags and team apparel.",
+    categories: [
+      {
+        title: "Footwear",
+        image: "/images/sneakers.jpg",
+        alt: "Black and red sneakers with embroidered details",
+        index: "01",
+        width: 1305,
+        height: 988,
+      },
+      {
+        title: "Bags",
+        image: "/images/bag.jpg",
+        alt: "A red, black and yellow shoulder bag with an embroidered emblem",
+        index: "02",
+        width: 1024,
+        height: 937,
+      },
+      {
+        title: "Team apparel",
+        image: "/images/team.jpg",
+        alt: "People wearing coordinated team apparel outdoors",
+        index: "03",
+        width: 960,
+        height: 1280,
+      },
+    ],
+  },
+  story: {
+    eyebrow: "ARM.SVT",
+    title: "Successful · Victorious · Thinkers",
+    signature: "ARM.SVT",
+    watermark: "SVT",
+  },
+  showcase: {
+    eyebrow: "Details, in focus",
+    title: "Photo stories",
+    introduction: "A selection of images.",
+    images: [
+      {
+        image: "/images/95c5b14b-bd15-40ca-8efc-0bc647a22eea.jpeg",
+        alt: "Two black, red and yellow shoulder bags with embroidered emblems",
+        caption: "Color and form",
+        shape: "showcase-image-tall",
+        width: 1204,
+        height: 1600,
+      },
+      {
+        image: "/images/WhatsApp Image 2026-11-07 at 21.25.26.jpeg",
+        alt: "A collage of colorful sneakers and embroidered designs",
+        caption: "In close detail",
+        shape: "showcase-image-wide",
+        width: 1368,
+        height: 899,
+      },
+      {
+        image: "/images/WhatsApp Image 2026-11-09 at 10.36.28.jpeg",
+        alt: "Two white, dark green and gold long-sleeve tops laid flat with embroidered designs",
+        caption: "A closer detail",
+        shape: "showcase-image-wide",
+        width: 1280,
+        height: 956,
+      },
+      {
+        image: "/images/WhatsApp Image 2026-11-09 at 10.36.32.jpeg",
+        alt: "Hands handling cut black, red and yellow panels beside a sewing machine",
+        caption: "At the worktable",
+        shape: "showcase-image-wide",
+        width: 963,
+        height: 1280,
+      },
+      {
+        image: "/images/WhatsApp Image 2026-11-09 at 10.36.35.jpeg",
+        alt: "An overhead view of black, red, yellow and gray bags with embroidered designs",
+        caption: "A wider view",
+        shape: "showcase-image-wide",
+        width: 963,
+        height: 1280,
+      },
+    ],
+  },
+  videos: {
+    eyebrow: "In motion",
+    title: "Moving image",
+    introduction: "Watch selected ARM.SVT videos.",
+    items: [
+      {
+        source: "/videos/WhatsApp%20Video%202026-11-07%20at%2021.25.15.mp4",
+        label: "ARM.SVT video 01",
+      },
+      {
+        source: "/videos/WhatsApp%20Video%202026-11-07%20at%2021.25.25.mp4",
+        label: "ARM.SVT video 02",
+      },
+      {
+        source: "/videos/WhatsApp%20Video%202026-11-08%20at%2014.48.15.mp4",
+        label: "ARM.SVT video 03",
+      },
+    ],
+  },
+  contact: {
+    eyebrow: "Continue the conversation",
+    title: "Connect with ARM.SVT.",
+    description: "For enquiries, reach out through the ARM.SVT Facebook page.",
+    linkLabel: "Visit Facebook",
+  },
+  footer: {
+    note: "Successful · Victorious · Thinkers",
+    backToTop: "Back to top",
+  },
+} as const;

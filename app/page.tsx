@@ -1,69 +1,246 @@
 import Image from "next/image";
+import Navbar from "@/components/Navbar";
+import { siteContent } from "@/content/site";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+    <div className="site-shell" id="top">
+      <Navbar />
+      <main>
+        <section className="hero-section" aria-labelledby="hero-title">
+          <div className="hero-inner">
+            <div className="hero-art" aria-hidden="true">
+              <span className="hero-art-ring hero-art-ring-outer" />
+              <span className="hero-art-ring hero-art-ring-inner" />
+              <span className="hero-art-cross hero-art-cross-horizontal" />
+              <span className="hero-art-cross hero-art-cross-vertical" />
+              <span className="hero-art-monogram">
+                {siteContent.hero.monogram}
+              </span>
+              <span className="hero-art-point hero-art-point-top" />
+              <span className="hero-art-point hero-art-point-bottom" />
+              <span className="hero-art-orbit hero-art-orbit-one" />
+              <span className="hero-art-orbit hero-art-orbit-two" />
+            </div>
+            <div className="hero-copy">
+              <p className="hero-eyebrow">
+                <span className="hero-eyebrow-line" aria-hidden="true" />
+                {siteContent.hero.eyebrow}
+              </p>
+              <h1 className="hero-title" id="hero-title">
+                <span className="hero-title-line hero-title-line-one">
+                  {siteContent.hero.title}
+                </span>
+                <span className="hero-title-line hero-title-line-two">
+                  {siteContent.hero.introduction}
+                </span>
+              </h1>
+              <div className="hero-bottom">
+                <div className="hero-links">
+                  <a className="hero-link hero-link-primary" href="#collections">
+                    <span>{siteContent.hero.collectionLink}</span>
+                    <span className="hero-link-arrow" aria-hidden="true">
+                      ↘
+                    </span>
+                  </a>
+                  <a className="hero-link hero-link-secondary" href="#story">
+                    {siteContent.hero.storyLink}
+                  </a>
+                </div>
+                <span className="hero-edition">{siteContent.hero.edition}</span>
+              </div>
+            </div>
+          </div>
+          <span className="hero-coordinate hero-coordinate-left" aria-hidden="true">
+            {siteContent.brandName}
+          </span>
+          <span className="hero-coordinate hero-coordinate-right" aria-hidden="true">
+            {siteContent.tagline}
+          </span>
+        </section>
+
+        <section
+          className="tagline-marquee"
+          aria-label={siteContent.tagline}
+        >
+          <div className="marquee-track" aria-hidden="true">
+            {Array.from({ length: 4 }, (_, index) => (
+              <span className="marquee-group" key={index}>
+                <span>{siteContent.tagline}</span>
+                <span className="marquee-separator">✳</span>
+              </span>
+            ))}
+          </div>
+        </section>
+
+        <section
+          className="content-section collection-section"
+          id="collections"
+          aria-labelledby="collection-title"
+        >
+          <div className="section-heading collection-heading">
+            <div>
+              <p className="section-eyebrow">{siteContent.collection.eyebrow}</p>
+              <h2 className="section-title" id="collection-title">
+                {siteContent.collection.title}
+              </h2>
+            </div>
+            <p className="section-introduction">
+              {siteContent.collection.introduction}
+            </p>
+          </div>
+
+          <div className="category-grid">
+            {siteContent.collection.categories.map((category) => (
+              <article className="category-card" key={category.index}>
+                <div className="category-image-wrap">
+                  <Image
+                    className="category-image"
+                    src={category.image}
+                    alt={category.alt}
+                    width={category.width}
+                    height={category.height}
+                    sizes="(max-width: 700px) 92vw, (max-width: 1050px) 45vw, 30vw"
+                  />
+                  <span className="category-index">{category.index}</span>
+                </div>
+                <h3 className="category-title">{category.title}</h3>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section
+          className="story-section"
+          id="story"
+          aria-labelledby="story-title"
+        >
+          <div className="story-inner">
+            <p className="section-eyebrow">{siteContent.story.eyebrow}</p>
+            <h2 className="story-title" id="story-title">
+              {siteContent.story.title}
+            </h2>
+            <span className="story-signature">{siteContent.story.signature}</span>
+          </div>
+          <span className="story-mark" aria-hidden="true">
+            {siteContent.story.watermark}
+          </span>
+        </section>
+
+        <section
+          className="content-section showcase-section"
+          id="showcase"
+          aria-labelledby="showcase-title"
+        >
+          <div className="section-heading">
+            <div>
+              <p className="section-eyebrow">{siteContent.showcase.eyebrow}</p>
+              <h2 className="section-title" id="showcase-title">
+                {siteContent.showcase.title}
+              </h2>
+            </div>
+            <p className="section-introduction">
+              {siteContent.showcase.introduction}
+            </p>
+          </div>
+
+          <div className="showcase-grid">
+            {siteContent.showcase.images.map((image) => (
+              <figure
+                className={`showcase-item ${image.shape}`}
+                key={image.image}
+              >
+                <div className="showcase-image-wrap">
+                  <Image
+                    className="showcase-image"
+                    src={image.image}
+                    alt={image.alt}
+                    width={image.width}
+                    height={image.height}
+                    sizes="(max-width: 700px) 92vw, 50vw"
+                  />
+                </div>
+                <figcaption className="showcase-caption">
+                  <span>{image.caption}</span>
+                  <span aria-hidden="true">↗</span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+
+        <section
+          className="content-section video-section"
+          aria-labelledby="video-title"
+        >
+          <div className="section-heading">
+            <div>
+              <p className="section-eyebrow">{siteContent.videos.eyebrow}</p>
+              <h2 className="section-title" id="video-title">
+                {siteContent.videos.title}
+              </h2>
+            </div>
+            <p className="section-introduction">
+              {siteContent.videos.introduction}
+            </p>
+          </div>
+
+          <div className="video-grid">
+            {siteContent.videos.items.map((video) => (
+              <figure className="video-card" key={video.source}>
+                <video
+                  className="video-player"
+                  controls
+                  playsInline
+                  preload="metadata"
+                  aria-label={video.label}
+                >
+                  <source src={video.source} type="video/mp4" />
+                </video>
+                <figcaption className="video-caption">{video.label}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+
+        <section
+          className="contact-section"
+          id="contact"
+          aria-labelledby="contact-title"
+        >
+          <div className="contact-inner">
+            <div className="contact-copy">
+              <p className="section-eyebrow">{siteContent.contact.eyebrow}</p>
+              <h2 className="contact-title" id="contact-title">
+                {siteContent.contact.title}
+              </h2>
+              <p className="contact-description">
+                {siteContent.contact.description}
+              </p>
+            </div>
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              className="contact-link"
+              href={siteContent.facebookUrl}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+              <span>{siteContent.contact.linkLabel}</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </section>
       </main>
+
+      <footer className="site-footer">
+        <a className="footer-brand" href="#top">
+          {siteContent.brandName}
+        </a>
+        <p className="footer-note">{siteContent.footer.note}</p>
+        <a className="footer-top-link" href="#top">
+          {siteContent.footer.backToTop}
+          <span aria-hidden="true">↑</span>
+        </a>
+      </footer>
     </div>
   );
 }
