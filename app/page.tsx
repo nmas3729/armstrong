@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CollectionPhotoCard from "@/components/CollectionPhotoCard";
 import Navbar from "@/components/Navbar";
 import ProductionPhotos from "@/components/ProductionPhotos";
 import { siteContent } from "@/content/site";
@@ -136,22 +137,17 @@ export default function Home() {
           </div>
 
           <div className="category-grid">
-            {siteContent.collection.categories.map((category) => (
-              <article className="category-card" key={category.index}>
-                <div className="category-image-wrap">
-                  <Image
-                    className="category-image"
-                    src={category.image}
-                    alt={category.alt}
-                    width={category.width}
-                    height={category.height}
-                    sizes="(max-width: 700px) 92vw, (max-width: 1050px) 45vw, 30vw"
-                  />
-                  <span className="category-index">{category.index}</span>
-                </div>
-                <h3 className="category-title">{category.title}</h3>
-              </article>
-            ))}
+            {siteContent.collection.categories.map((category) => {
+              return (
+                <CollectionPhotoCard
+                  key={category.index}
+                  photos={siteContent.collection[category.photos]}
+                  title={category.title}
+                  index={category.index}
+                  preloadCover={category.photos === "footwearPhotos"}
+                />
+              );
+            })}
           </div>
         </section>
 
@@ -281,6 +277,12 @@ export default function Home() {
           {siteContent.brandName}
         </a>
         <p className="footer-note">{siteContent.footer.note}</p>
+        <p className="footer-credit">
+          Design &amp; hosted by{" "}
+          <a href="https://sihleb.co.za" target="_blank" rel="noopener noreferrer">
+            SihleB Digital Studio
+          </a>
+        </p>
         <a className="footer-top-link" href="#top">
           {siteContent.footer.backToTop}
           <span aria-hidden="true">↑</span>
