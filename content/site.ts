@@ -1,11 +1,10 @@
 export const siteContent = {
   brandName: "Armstrong SVT (Pty) Ltd",
   companyRegistrationNumber: "2018/563672/07",
-  closingLine: "Your Manufacturing and Branding Partner.",
   tagline: "Successful · Victorious · Thinkers",
   facebookUrl: "https://www.facebook.com/ARM.SVT",
   production: {
-    eyebrow: "Manufacturing at Armstrong SVT (Pty) Ltd",
+    eyebrow: "Manufacturing",
     title: "From start to finish",
     introduction: "Selected images and a printing clip.",
     photoGroups: [
@@ -50,7 +49,7 @@ export const siteContent = {
     printing: {
       label: "Printing in progress",
       description:
-        "A person operates a printer as a large printed design passes through.",
+        "Our Graphic Designer carefully inspecting the client's design on the dye-sublimation paper, ensuring every detail is perfect before production.",
       source: "/videos/blanket-before/blanket1.mp4",
     },
   },
@@ -79,13 +78,12 @@ export const siteContent = {
     closeMenu: "Close navigation menu",
   },
   hero: {
-    eyebrow: "Successful · Victorious · Thinkers",
     title: "Armstrong SVT (Pty) Ltd",
     introduction: "Successful · Victorious · Thinkers",
     collectionLink: "Explore the collection",
-    storyLink: "A note from Armstrong SVT (Pty) Ltd",
+    storyLink: "Read our story",
     monogram: "SVT",
-    edition: "Armstrong SVT (Pty) Ltd · 01",
+    edition: "01",
   },
   collection: {
     eyebrow: "A considered selection",
@@ -153,9 +151,26 @@ export const siteContent = {
     eyebrow: "Established 2018",
     title: "Our story",
     paragraphs: [
-      "Armstrong SVT (Pty) Ltd is a diversified manufacturing, branding and marketing company established in 2018. It began with branding and marketing solutions for other businesses, then expanded into footwear manufacturing and a wider range of customised products. Today, the company offers manufacturing, branding and customised production across multiple product categories.",
+      "Armstrong SVT brings manufacturing, branding and customised production together under one roof.",
     ],
     watermark: "SVT",
+  },
+  ownerMessage: {
+    title: "A message from Armstrong SVT (Pty) Ltd",
+    paragraphs: [
+      "At Armstrong SVT (Pty) Ltd, we believe that every great business begins with a vision, grows through determination and succeeds through delivering value.",
+      "Established in 2018, Armstrong SVT has evolved into a diversified manufacturing, branding and marketing company committed to providing quality products, innovative solutions and reliable services. Our journey has been driven by a passion for creativity, entrepreneurship and identifying opportunities that create value for our customers and business partners.",
+      "From branding and marketing solutions to the manufacturing of footwear, corporate wear, fashion products, accessories and customised merchandise, we continuously strive to expand our capabilities, improve our standards and respond to the changing needs of the market.",
+      "We understand that our success is not measured only by the products we manufacture or the services we provide, but also by the relationships we build, the trust we earn and the impact we create.",
+      "As we continue to grow, our commitment remains firmly rooted in quality, innovation, integrity and customer satisfaction.",
+      "Thank you for being part of our journey. We look forward to building lasting relationships and creating opportunities together.",
+    ],
+    signature: [
+      "Armstrong Sithole",
+      "Director",
+      "Armstrong SVT (Pty) Ltd",
+      "Building opportunities. Creating value. Delivering quality.",
+    ],
   },
   capabilities: {
     eyebrow: "What we do",
@@ -284,31 +299,31 @@ export const siteContent = {
   videos: {
     eyebrow: "In motion",
     title: "Moving image",
-    introduction: "Watch selected Armstrong SVT (Pty) Ltd videos.",
+    introduction: "Watch selected videos.",
     items: [
       {
         source: "/videos/WhatsApp%20Video%202026-11-07%20at%2021.25.15.mp4",
-        label: "Armstrong SVT (Pty) Ltd video 01",
+        label: "Video 01",
       },
       {
         source: "/videos/WhatsApp%20Video%202026-11-07%20at%2021.25.25.mp4",
-        label: "Armstrong SVT (Pty) Ltd video 02",
+        label: "Video 02",
       },
       {
         source: "/videos/WhatsApp%20Video%202026-11-08%20at%2014.48.15.mp4",
-        label: "Armstrong SVT (Pty) Ltd video 03",
+        label: "Video 03",
       },
       {
         source: "/videos/blanket-after/blanket2.mp4",
-        label: "Armstrong SVT (Pty) Ltd video 04",
+        label: "Video 04",
       },
       {
         source: "/videos/WhatsApp%20Video%202026-11-10%20at%2009.50.29.mp4",
-        label: "Armstrong SVT (Pty) Ltd video 05",
+        label: "Video 05",
       },
       {
         source: "/videos/WhatsApp%20Video%202026-11-10%20at%2012.15.52.mp4",
-        label: "Armstrong SVT (Pty) Ltd video 06",
+        label: "Video 06",
       },
     ],
   },
@@ -316,14 +331,12 @@ export const siteContent = {
     eyebrow: "Continue the conversation",
     title: "Connect with Armstrong SVT (Pty) Ltd.",
     description:
-      "For enquiries, reach out through the Armstrong SVT (Pty) Ltd Facebook page.",
+      "For enquiries, reach out through our Facebook page.",
     closingLine: "Your Manufacturing and Branding Partner.",
     linkLabel: "Visit Facebook",
   },
   footer: {
-    note: "Successful · Victorious · Thinkers",
     registrationLabel: "Company registration number",
-    closingLine: "Your Manufacturing and Branding Partner.",
     backToTop: "Back to top",
   },
 } as const;

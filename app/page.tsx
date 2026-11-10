@@ -1,6 +1,7 @@
 import Image from "next/image";
 import CollectionPhotoCard from "@/components/CollectionPhotoCard";
 import Navbar from "@/components/Navbar";
+import OwnerMessage from "@/components/OwnerMessage";
 import ProductionPhotos from "@/components/ProductionPhotos";
 import { siteContent } from "@/content/site";
 
@@ -25,10 +26,6 @@ export default function Home() {
               <span className="hero-art-orbit hero-art-orbit-two" />
             </div>
             <div className="hero-copy">
-              <p className="hero-eyebrow">
-                <span className="hero-eyebrow-line" aria-hidden="true" />
-                {siteContent.hero.eyebrow}
-              </p>
               <h1 className="hero-title" id="hero-title">
                 <span className="hero-title-line hero-title-line-one">
                   {siteContent.hero.title}
@@ -53,22 +50,14 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <span className="hero-coordinate hero-coordinate-left" aria-hidden="true">
-            {siteContent.brandName}
-          </span>
-          <span className="hero-coordinate hero-coordinate-right" aria-hidden="true">
-            {siteContent.tagline}
-          </span>
         </section>
 
         <section className="tagline-marquee" aria-label={siteContent.tagline}>
           <div className="marquee-track" aria-hidden="true">
-            {Array.from({ length: 4 }, (_, index) => (
-              <span className="marquee-group" key={index}>
-                <span>{siteContent.tagline}</span>
-                <span className="marquee-separator">✳</span>
-              </span>
-            ))}
+            <span className="marquee-group">
+              <span>{siteContent.tagline}</span>
+              <span className="marquee-separator">✳</span>
+            </span>
           </div>
         </section>
 
@@ -163,11 +152,21 @@ export default function Home() {
                 {paragraph}
               </p>
             ))}
-            <p className="story-signature">{siteContent.closingLine}</p>
           </div>
           <span className="story-mark" aria-hidden="true">
             {siteContent.story.watermark}
           </span>
+        </section>
+
+        <section
+          className="content-section owner-message-section"
+          aria-labelledby="owner-message-title"
+        >
+          <OwnerMessage
+            title={siteContent.ownerMessage.title}
+            paragraphs={siteContent.ownerMessage.paragraphs}
+            signature={siteContent.ownerMessage.signature}
+          />
         </section>
 
         <section
@@ -321,8 +320,6 @@ export default function Home() {
             {siteContent.companyRegistrationNumber}
           </p>
         </div>
-        <p className="footer-note">{siteContent.footer.note}</p>
-        <p className="footer-closing-line">{siteContent.footer.closingLine}</p>
         <p className="footer-credit">
           Design &amp; hosted by{" "}
           <a href="https://sihleb.co.za" target="_blank" rel="noopener noreferrer">

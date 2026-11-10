@@ -86,6 +86,7 @@ export default function CollectionPhotoCard({
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
       >
+        <span className="category-title">{title}</span>
         <span className="category-image-wrap collection-image-wrap">
           <span className="collection-image-stack">
             {photos.map((photo, photoIndex) => (
@@ -116,7 +117,6 @@ export default function CollectionPhotoCard({
             </span>
           </span>
         </span>
-        <span className="category-title">{title}</span>
       </button>
       {lightboxIndex !== null && (
         <PhotoLightbox
