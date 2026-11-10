@@ -44,7 +44,7 @@ export default function Navbar() {
             height={48}
             loading="eager"
           />
-          {siteContent.brandName}
+          <span className="site-brand-name">{siteContent.brandName}</span>
         </Link>
 
         <button

@@ -1,9 +1,11 @@
 export const siteContent = {
-  brandName: "ARM.SVT",
+  brandName: "Armstrong SVT (Pty) Ltd",
+  companyRegistrationNumber: "2018/563672/07",
+  closingLine: "Your Manufacturing and Branding Partner.",
   tagline: "Successful · Victorious · Thinkers",
   facebookUrl: "https://www.facebook.com/ARM.SVT",
   production: {
-    eyebrow: "Manufacturing at ARM.SVT",
+    eyebrow: "Manufacturing at Armstrong SVT (Pty) Ltd",
     title: "From start to finish",
     introduction: "Selected images and a printing clip.",
     photoGroups: [
@@ -55,9 +57,10 @@ export const siteContent = {
   whatsapp: {
     phoneNumber: "27694132852",
     isVerified: true,
-    message: "Hello ARM.SVT, I would like to make an enquiry. Thank you.",
+    message:
+      "Hello Armstrong SVT (Pty) Ltd, I would like to make an enquiry. Thank you.",
     label: "WhatsApp",
-    accessibleName: "Contact ARM.SVT on WhatsApp",
+    accessibleName: "Contact Armstrong SVT (Pty) Ltd on WhatsApp",
   },
   preLaunchReview: {
     mediaPermissions:
@@ -77,12 +80,12 @@ export const siteContent = {
   },
   hero: {
     eyebrow: "Successful · Victorious · Thinkers",
-    title: "ARM.SVT",
+    title: "Armstrong SVT (Pty) Ltd",
     introduction: "Successful · Victorious · Thinkers",
     collectionLink: "Explore the collection",
-    storyLink: "A note from ARM.SVT",
+    storyLink: "A note from Armstrong SVT (Pty) Ltd",
     monogram: "SVT",
-    edition: "ARM.SVT · 01",
+    edition: "Armstrong SVT (Pty) Ltd · 01",
   },
   collection: {
     eyebrow: "A considered selection",
@@ -143,10 +146,65 @@ export const siteContent = {
     ],
   },
   story: {
-    eyebrow: "ARM.SVT",
-    title: "Successful · Victorious · Thinkers",
-    signature: "ARM.SVT",
+    eyebrow: "Established 2018",
+    title: "Our story",
+    paragraphs: [
+      "Armstrong SVT (Pty) Ltd is a diversified manufacturing, branding and marketing company established in 2018. It began with branding and marketing solutions for other businesses, then expanded into footwear manufacturing and a wider range of customised products. Today, the company offers manufacturing, branding and customised production across multiple product categories.",
+    ],
     watermark: "SVT",
+  },
+  capabilities: {
+    eyebrow: "What we do",
+    title: "Manufacturing capabilities",
+    introduction:
+      "A range of manufacturing, branding and customised production services.",
+    items: [
+      {
+        title: "Bulk clothing and apparel",
+        details: [
+          "Orders of 1,000 units and above",
+          "Jackets, golf shirts and T-shirts",
+          "Hats, beanies and ties",
+          "Jerseys, knitwear, cardigans and scarves",
+          "Other customised apparel",
+        ],
+      },
+      {
+        title: "Leather products and footwear",
+        details: [
+          "Corporate and casual shoes",
+          "Leather bags and accessories",
+          "Wallets and belts",
+          "Sandals and customised footwear",
+        ],
+      },
+      {
+        title: "Bags",
+        details: [
+          "School, church and sling bags",
+          "Travel and cooler bags",
+          "Corporate and promotional bags",
+        ],
+      },
+      {
+        title: "Blankets and textiles",
+        details: [
+          "Branded and customised blankets",
+          "Single-sided and double-sided blankets",
+          "Other customised textile products",
+        ],
+      },
+      {
+        title: "Branding and production",
+        details: [
+          "Garment manufacturing and leather custom design",
+          "Embroidery and dye sublimation printing",
+          "Direct-to-Film (DTF) printing",
+          "Corporate and promotional branding",
+          "Customised product development",
+        ],
+      },
+    ],
   },
   showcase: {
     eyebrow: "Details, in focus",
@@ -222,34 +280,38 @@ export const siteContent = {
   videos: {
     eyebrow: "In motion",
     title: "Moving image",
-    introduction: "Watch selected ARM.SVT videos.",
+    introduction: "Watch selected Armstrong SVT (Pty) Ltd videos.",
     items: [
       {
         source: "/videos/WhatsApp%20Video%202026-11-07%20at%2021.25.15.mp4",
-        label: "ARM.SVT video 01",
+        label: "Armstrong SVT (Pty) Ltd video 01",
       },
       {
         source: "/videos/WhatsApp%20Video%202026-11-07%20at%2021.25.25.mp4",
-        label: "ARM.SVT video 02",
+        label: "Armstrong SVT (Pty) Ltd video 02",
       },
       {
         source: "/videos/WhatsApp%20Video%202026-11-08%20at%2014.48.15.mp4",
-        label: "ARM.SVT video 03",
+        label: "Armstrong SVT (Pty) Ltd video 03",
       },
       {
         source: "/videos/blanket-after/blanket2.mp4",
-        label: "ARM.SVT video 04",
+        label: "Armstrong SVT (Pty) Ltd video 04",
       },
     ],
   },
   contact: {
     eyebrow: "Continue the conversation",
-    title: "Connect with ARM.SVT.",
-    description: "For enquiries, reach out through the ARM.SVT Facebook page.",
+    title: "Connect with Armstrong SVT (Pty) Ltd.",
+    description:
+      "For enquiries, reach out through the Armstrong SVT (Pty) Ltd Facebook page.",
+    closingLine: "Your Manufacturing and Branding Partner.",
     linkLabel: "Visit Facebook",
   },
   footer: {
     note: "Successful · Victorious · Thinkers",
+    registrationLabel: "Company registration number",
+    closingLine: "Your Manufacturing and Branding Partner.",
     backToTop: "Back to top",
   },
 } as const;

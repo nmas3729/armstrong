@@ -61,10 +61,7 @@ export default function Home() {
           </span>
         </section>
 
-        <section
-          className="tagline-marquee"
-          aria-label={siteContent.tagline}
-        >
+        <section className="tagline-marquee" aria-label={siteContent.tagline}>
           <div className="marquee-track" aria-hidden="true">
             {Array.from({ length: 4 }, (_, index) => (
               <span className="marquee-group" key={index}>
@@ -161,11 +158,50 @@ export default function Home() {
             <h2 className="story-title" id="story-title">
               {siteContent.story.title}
             </h2>
-            <span className="story-signature">{siteContent.story.signature}</span>
+            {siteContent.story.paragraphs.map((paragraph) => (
+              <p className="story-copy" key={paragraph}>
+                {paragraph}
+              </p>
+            ))}
+            <p className="story-signature">{siteContent.closingLine}</p>
           </div>
           <span className="story-mark" aria-hidden="true">
             {siteContent.story.watermark}
           </span>
+        </section>
+
+        <section
+          className="content-section capabilities-section"
+          aria-labelledby="capabilities-title"
+        >
+          <div className="section-heading">
+            <div>
+              <p className="section-eyebrow">
+                {siteContent.capabilities.eyebrow}
+              </p>
+              <h2 className="section-title" id="capabilities-title">
+                {siteContent.capabilities.title}
+              </h2>
+            </div>
+            <p className="section-introduction">
+              {siteContent.capabilities.introduction}
+            </p>
+          </div>
+          <div className="capabilities-grid">
+            {siteContent.capabilities.items.map((capability, index) => (
+              <article className="capability-card" key={capability.title}>
+                <span className="capability-index" aria-hidden="true">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <h3 className="capability-title">{capability.title}</h3>
+                <ul className="capability-details">
+                  {capability.details.map((detail) => (
+                    <li key={detail}>{detail}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
         </section>
 
         <section
@@ -258,6 +294,9 @@ export default function Home() {
               <p className="contact-description">
                 {siteContent.contact.description}
               </p>
+              <p className="contact-closing-line">
+                {siteContent.contact.closingLine}
+              </p>
             </div>
             <a
               className="contact-link"
@@ -273,10 +312,17 @@ export default function Home() {
       </main>
 
       <footer className="site-footer">
-        <a className="footer-brand" href="#top">
-          {siteContent.brandName}
-        </a>
+        <div className="footer-company">
+          <a className="footer-brand" href="#top">
+            {siteContent.brandName}
+          </a>
+          <p className="footer-registration">
+            {siteContent.footer.registrationLabel}:{" "}
+            {siteContent.companyRegistrationNumber}
+          </p>
+        </div>
         <p className="footer-note">{siteContent.footer.note}</p>
+        <p className="footer-closing-line">{siteContent.footer.closingLine}</p>
         <p className="footer-credit">
           Design &amp; hosted by{" "}
           <a href="https://sihleb.co.za" target="_blank" rel="noopener noreferrer">
