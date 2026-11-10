@@ -15,9 +15,38 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteTitle = `${siteContent.brandName} | Manufacturing & Branding`;
+const siteDescription =
+  "Armstrong SVT (Pty) Ltd is your manufacturing and branding partner for apparel, footwear, bags, blankets, textiles and production.";
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: siteContent.brandName,
+  legalName: siteContent.brandName,
+  description: siteDescription,
+  slogan: siteContent.tagline,
+  identifier: {
+    "@type": "PropertyValue",
+    name: "Company registration number",
+    value: siteContent.companyRegistrationNumber,
+  },
+  sameAs: [siteContent.facebookUrl],
+};
+
 export const metadata: Metadata = {
-  title: siteContent.brandName,
-  description: `${siteContent.brandName} — ${siteContent.closingLine}`,
+  title: siteTitle,
+  description: siteDescription,
+  openGraph: {
+    type: "website",
+    title: siteTitle,
+    description: siteDescription,
+    siteName: siteContent.brandName,
+  },
+  twitter: {
+    card: "summary",
+    title: siteTitle,
+    description: siteDescription,
+  },
 };
 
 export const viewport: Viewport = {
@@ -31,6 +60,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
         <CursorGlow />
         {children}
         <WhatsAppButton />

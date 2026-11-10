@@ -20,7 +20,9 @@ export default function WhatsAppButton() {
     const updateVisibility = () => {
       const buttonRect = button.getBoundingClientRect();
       const overlapsControl = Array.from(
-        document.querySelectorAll("a[href], button, video"),
+        document.querySelectorAll(
+          "a[href], button, video, h1, h2, h3, p, figcaption, li",
+        ),
       ).some((element) => {
         if (element === button) {
           return false;

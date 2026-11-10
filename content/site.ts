@@ -107,9 +107,8 @@ export const siteContent = {
       { src: "/images/team/team.jpg", alt: "Team apparel photo 1", width: 960, height: 1280 },
       { src: "/images/team/WhatsApp Image 2026-11-10 at 09.50.24 (1).jpeg", alt: "Team apparel photo 2", width: 960, height: 1280 },
       { src: "/images/team/WhatsApp Image 2026-11-10 at 09.50.24.jpeg", alt: "Team apparel photo 3", width: 960, height: 1280 },
-      { src: "/images/team/WhatsApp Image 2026-11-10 at 09.50.25 (1).jpeg", alt: "Team apparel photo 4", width: 960, height: 1280 },
-      { src: "/images/team/WhatsApp Image 2026-11-10 at 09.50.25.jpeg", alt: "Team apparel photo 5", width: 960, height: 1280 },
-      { src: "/images/team/WhatsApp Image 2026-11-10 at 09.50.26.jpeg", alt: "Team apparel photo 6", width: 960, height: 1280 },
+      { src: "/images/team/WhatsApp Image 2026-11-10 at 09.50.25.jpeg", alt: "Team apparel photo 4", width: 960, height: 1280 },
+      { src: "/images/team/WhatsApp Image 2026-11-10 at 09.50.26.jpeg", alt: "Team apparel photo 5", width: 960, height: 1280 },
     ],
     footwearPhotos: [
       { src: "/images/footwear/01.jpeg", alt: "Footwear photo 1", width: 800, height: 600 },
@@ -306,6 +305,10 @@ export const siteContent = {
       {
         source: "/videos/WhatsApp%20Video%202026-11-10%20at%2009.50.29.mp4",
         label: "Armstrong SVT (Pty) Ltd video 05",
+      },
+      {
+        source: "/videos/WhatsApp%20Video%202026-11-10%20at%2012.15.52.mp4",
+        label: "Armstrong SVT (Pty) Ltd video 06",
       },
     ],
   },
