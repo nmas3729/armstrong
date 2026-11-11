@@ -24,7 +24,7 @@ export const siteContent = {
           { src: "/images/bags-after/after2.jpeg", alt: "Bag, after photo 2", width: 1204, height: 1600 },
           { src: "/images/bags-after/after3.jpeg", alt: "Bag, after photo 3", width: 1204, height: 1600 },
           { src: "/images/bags-after/after4.jpeg", alt: "Bag, after photo 4", width: 899, height: 1599 },
-          { src: "/images/bags-after/after5.jpeg", alt: "Bag, after photo 5", width: 1600, height: 1204 },
+          { src: "/images/photo-stories/after5.jpeg", alt: "Bag, after photo 5", width: 1600, height: 1204 },
           { src: "/images/bags-after/after6.jpeg", alt: "Bag, after photo 6", width: 1600, height: 1204 },
           { src: "/images/bags-after/after7.jpeg", alt: "Bag, after photo 7", width: 1204, height: 1600 },
           { src: "/images/bags-after/after8.jpeg", alt: "Bag, after photo 8", width: 899, height: 1599 },
@@ -66,12 +66,6 @@ export const siteContent = {
             alt: "Collection of finished custom footwear",
             width: 1280,
             height: 963,
-          },
-          {
-            src: "/images/shoes-after/WhatsApp Image 2026-11-11 at 17.31.55.jpeg",
-            alt: "Pair of finished black, red and yellow custom shoes",
-            width: 1372,
-            height: 741,
           },
           {
             src: "/images/shoes-after/WhatsApp Image 2026-11-11 at 17.31.56 (1).jpeg",
@@ -176,6 +170,12 @@ export const siteContent = {
       { src: "/images/footwear/17.jpeg", alt: "Footwear photo 17", width: 1600, height: 1204 },
       { src: "/images/footwear/sneakers.jpg", alt: "Footwear photo 18", width: 1305, height: 988 },
       { src: "/images/footwear/WhatsApp Image 2026-11-09 at 10.36.47.jpeg", alt: "Footwear photo 19", width: 1536, height: 1024 },
+      {
+        src: "/images/footwear/WhatsApp Image 2026-11-11 at 17.31.55.jpeg",
+        alt: "Pair of finished black, red and yellow custom shoes",
+        width: 1372,
+        height: 741,
+      },
     ],
     categories: [
       {
@@ -389,6 +389,22 @@ export const siteContent = {
         shape: "showcase-image-wide",
         width: 1200,
         height: 1600,
+      },
+      {
+        image: "/images/photo-stories/after5.jpeg",
+        alt: "Collection of custom-branded bags prepared for delivery",
+        caption: "Custom bags 01",
+        shape: "showcase-image-wide",
+        width: 1600,
+        height: 1204,
+      },
+      {
+        image: "/images/photo-stories/story-1.jpeg",
+        alt: "Custom shoulder bags in red, black and yellow",
+        caption: "Custom bags 02",
+        shape: "showcase-image-wide",
+        width: 1368,
+        height: 899,
       },
     ],
   },
