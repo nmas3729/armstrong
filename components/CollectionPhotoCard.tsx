@@ -76,7 +76,10 @@ export default function CollectionPhotoCard({
         className="collection-card-button"
         ref={buttonRef}
         type="button"
-        aria-label={`Open ${title.toLowerCase()} photos`}
+        aria-label={`View all ${photos.length} ${
+          photos.length === 1 ? "photo" : "photos"
+        } in ${title.toLowerCase()}`}
+        aria-haspopup="dialog"
         onClick={() => {
           returnFocusRef.current = buttonRef.current;
           setLightboxIndex(coverIndex);

@@ -964,6 +964,7 @@ body::after {
   cursor: pointer;
   font: inherit;
   text-align: left;
+  touch-action: manipulation;
 }
 
 .collection-card-button:focus-visible {
